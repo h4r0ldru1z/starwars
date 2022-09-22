@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 
 export const Personajes =()=>{
@@ -16,7 +17,7 @@ export const Personajes =()=>{
 						</div>
 						<div className="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
 							<div className="btn-group me-2"role="group" aria-label="First group">
-								<button type="button" className="btn btn-primary">Ver Más!</button>
+								<button type="button" className="btn btn-primary" onClick={()=>{<link to="/single"></link>}}>Ver Más!</button>
 							</div>
 							<div className="btn-group me-2" role="group" aria-label="Third group">
 								<button type="button" className="btn btn-outline-warning"><i className="fa fa-heart text-warning" /></button>
@@ -76,6 +77,7 @@ export const Personajes =()=>{
 					</div>
 				</div>
 			</div>
+            <Outlet/>
 		</div>
 		</>
     )
