@@ -1,3 +1,4 @@
+/* #Flux permite tener acceso a pila de datos/funciones de cualquier archivo */
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
