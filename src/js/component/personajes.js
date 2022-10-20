@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Personajes = ({ name, uid }) => {
   return (
@@ -28,7 +29,7 @@ export const Personajes = ({ name, uid }) => {
             </Link>
           </div>
           <div className="btn-group me-2" role="group" aria-label="Third group">
-            <button type="button" className="btn btn-outline-warning">
+            <button type="button" className="btn btn-outline-warning" onClick={()=> actions.addFavorito({id:id, name:name})}>
               <i className="fa fa-heart text-warning" />
             </button>
           </div>

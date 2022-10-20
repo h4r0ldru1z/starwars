@@ -27,7 +27,7 @@ export const Planetas = ({ uid, name }) => {
             </Link>
           </div>
           <div className="btn-group me-2" role="group" aria-label="Third group">
-            <button type="button" className="btn btn-outline-warning">
+            <button type="button" className="btn btn-outline-warning" onClick={()=> actions.addFavorito({id:id, name:name})}>
               <i className="fa fa-heart text-warning" />
             </button>
           </div>
